@@ -1,0 +1,14 @@
+{% extends 'userhome.html' %}
+{% load static %}
+{% block content %}
+
+<table border="2" align= "center">   
+    <tr> <th> Available Drivers </th> <th> Gender</th> <th> Status </th></tr>
+    {% for d in drivers %}
+        <tr><td>{{d.DFname }}</td>
+        <td>{{d.Dgender }}</td>
+        <td><a href="driverbooking?did={{d.Did}}">request</a> </td></tr>
+    {% endfor %}
+</table>
+{% endblock content %}
+     

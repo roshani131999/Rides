@@ -1,0 +1,19 @@
+{% extends 'driverhome.html' %}
+
+{% load static %}
+{% block content %}
+<html>
+{% for d in data1 %}
+    Name  : {{d.Uid}} <br><br>
+    Pick Up: {{d.DBFrom}} <br><br>
+    Destination :{{d.DBTo}} <br><br>
+    Time :{{d.DBTime}} <br><br>
+    Pick up date: {{d.DBdate}} <br><br>
+    Return Date : {{d.DBreturndate}} <br><br>
+    <a  href="driveraccepts"> <input type ="submit" name="submit" value="Accept"></a> <br><br>
+    <a  href="driverrejects"> <input type ="submit" name="submit" value="Reject"></a> <br><br>
+{% endfor %}
+
+</html>
+{% endblock content %}
+     

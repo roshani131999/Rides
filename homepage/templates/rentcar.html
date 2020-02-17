@@ -1,0 +1,67 @@
+{% extends 'userhome.html' %}
+{% block content %}
+
+<form action="rentcaroutput" method="post">
+    {% csrf_token%}
+    <div class="container-fluid">
+    
+
+        <!-- Page Heading
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-4">
+        <h1 class="h3 mb-0 text-gray-800">Profile</h1>
+        </div>          
+
+        {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
+          {% endfor %}
+        {% endif %} -->
+
+        <!-- Main Content Here -->
+        <div class="row">
+          <div class="col-lg-2"></div>
+          <!-- <div class="col-lg-3 my-5">
+            <img src="{{user.profile.profile_image.url}}" class="rounded float-right" height="300px" width="300px">
+          </div> -->
+          <div class="card o-hidden border-0 shadow-lg my-5 col-lg-5">
+            <div class="card-body">
+                <p><strong>Car Name: <select id="cars" class="form-control form-control-user" name="carname"></strong>  </p>
+                <option value="Swift">Swift</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Honda">Honda</option>
+                <option value="I20">I20</option>
+                <option value="Audi">Wagon R</option>
+                <option value="BMW">BMW</option>
+                <option value="Eco">Eco</option>
+                <option value="Mercedes">Mercedes</option>
+                </select>
+                <p><strong>Car is AC:<input type="text" class="form-control form-control-user" name="carac" ></strong>  </p> </strong></p>
+                <p><strong>Notes : <input type="text" class="form-control form-control-user" name="notes" ></strong>  </p></strong></p>
+                <p><strong>Car Image: </br> &nbsp;<input type="file" name="imgcar"></strong>  </p> </strong> </p>
+                <input type="submit" class="btn btn-sm btn-primary shadow-sm" value="Rent Car"></input>
+            </div>
+          </div>
+        </div>
+
+
+
+    </div>
+   <!-- Car Name: <select id="cars" name="carname">
+       <option value="Swift">Swift</option>
+       <option value="Toyota">Toyota</option>
+       <option value="Honda">Honda</option>
+       <option value="I20">I20</option>
+       <option value="Audi">Audi</option>
+       <option value="BMW">BMW</option>
+       <option value="Eco">Eco</option>
+       <option value="Mercedes">Mercedes</option>
+   </select><br/><br/>
+   
+   Car isAC: <input type="text" name="carac"><br/><br/>
+   <!-- Car Capacity: <input type="text" name="capacity"><br/><br/> -->
+   <!-- Notes: <input type="text" name="notes"><br/><br/> -->
+   <!-- Car Image:    -->
+   <!-- <input type="file" name="imgcar" ><br/><br/> -->
+   <!-- <input type="submit" value="Rent a Car"> --> -->
+</form>
+{% endblock%}

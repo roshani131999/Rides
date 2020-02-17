@@ -1,0 +1,16 @@
+{% extends 'userhome.html' %}}
+{% block content %}
+<html>
+<form  method="POST" align="center" action="driverbook">
+    {%csrf_token%}
+From: <input type="text" name ="from1"><br><br>
+To : <input type ="text" name="to"><br><br>
+Date : <input type ="date" name="date"><br><br>
+Return Date : <input type="date" name="rdate"><br><br>
+From Time : <input type="time" name="time"><br><br>
+<input type="submit" name="submit" value="Request"><br><br>
+<input type="submit" name="submit" value="Cancel"><br><br>
+</form>
+</html>
+
+{% endblock content %}

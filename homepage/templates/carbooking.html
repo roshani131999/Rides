@@ -1,0 +1,18 @@
+{% extends 'userhome.html' %}
+{% block content %}
+
+<form action="" method="post" align="center">
+    {% csrf_token%}
+
+    <table>
+        <tr>
+            <th>Avalible Cars</th>
+        </tr>
+        <tr>
+            
+            <td>{{userdetail}}</td>
+            
+        </tr>
+    </table>
+</form>
+{% endblock%}
